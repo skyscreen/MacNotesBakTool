@@ -1,0 +1,17 @@
+set cnt to 18
+set i to 0
+tell application "System Events"
+	repeat cnt times
+		tell process "Notes"
+			set frontmost to true
+			click menu item "Export as PDF…" of menu 1 of menu bar item "File" of menu bar 1
+			delay 2
+			key code 76
+			key code 1 using {command down}
+			delay 1
+			key code 15 using {command down}
+			delay 5
+			key code 125
+		end tell
+	end repeat
+end tell
